@@ -1,0 +1,36 @@
+[2023-04-11 16:19:34] Socket created
+[2023-04-11 16:19:34] Started listening client's requests
+[2023-04-11 16:19:51] Received a request from 127.0.0.1:34599
+[2023-04-11 16:19:51] Request content: 2 2 3 3 4
+[2023-04-11 16:20:21] Received a request from 127.0.0.1:34599
+[2023-04-11 16:20:21] Request content: 3 1 2 3 4 5 6 7 8 9
+[2023-04-11 22:15:58] Socket created
+[2023-04-11 22:15:58] Started listening client's requests
+[2023-04-11 22:16:09] Socket created
+[2023-04-11 22:16:09] Started listening client's requests
+[2023-04-11 22:16:28] Received a request from 127.0.0.1:49347
+[2023-04-11 22:16:28] Request content: 2 2 3 4 5
+[2023-04-11 22:16:37] Socket created
+[2023-04-11 22:16:37] Started listening client's requests
+[2023-04-11 22:16:57] Received a request from 127.0.0.1:55413
+[2023-04-11 22:16:57] Request content: 2 3 3 4 5
+[2023-04-11 22:17:16] Received a request from 127.0.0.1:55413
+[2023-04-11 22:17:16] Request content: 3 3 4 5 6 5 4 3 4 5
+[2023-04-13 10:20:17] Socket created
+[2023-04-13 10:20:17] Started listening client's requests
+[2023-04-13 10:20:23] Received a request from 127.0.0.1:50216
+[2023-04-13 10:20:23] Request content: 2 3 4 5 6
+[2023-04-13 10:20:41] Received a request from 127.0.0.1:50216
+[2023-04-13 10:20:41] Request content: 3 3 4 5 6 7 8 1 2 8
+[2023-04-13 10:27:00] Socket created
+[2023-04-13 10:27:00] Started listening client's requests
+[2023-04-13 10:27:08] Received a request from 127.0.0.1:44154
+[2023-04-13 10:27:08] Request content: 2 2 3 4 5
+[2023-04-13 10:27:29] Received a request from 127.0.0.1:44154
+[2023-04-13 10:27:29] Request content: 5 1 2 3 4 5 1 2 3 4 5 6 5 4 3 2 4 5 6 7 8 0 8 7 6 1
+[2023-04-13 10:41:39] Socket created
+[2023-04-13 10:41:39] Started listening client's requests
+[2023-04-13 10:41:49] Received a request from 127.0.0.1:39646
+[2023-04-13 10:41:49] Request content: 2 2 3 4 6
+[2023-04-13 10:42:08] Received a request from 127.0.0.1:39646
+[2023-04-13 10:42:08] Request content: 3 2 3 4 6 7 8 9 3 7

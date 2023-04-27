@@ -1,0 +1,19 @@
+# /etc/pam.d/lpam
+# Конфигурационный файл для сервиса lpam
+# Использует модуль pam_unix.so для аутентификации и установки учетных данных
+# Использует модуль pam_permit.so для проверки доступа и управления сессией
+
+# Аутентификация
+auth required pam_unix.so
+
+# Установка учетных данных
+auth required pam_unix.so
+
+# Проверка доступа
+account required pam_permit.so
+
+# Смена пароля
+password required pam_unix.so
+
+# Управление сессией
+session required pam_permit.so
