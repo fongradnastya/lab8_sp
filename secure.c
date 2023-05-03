@@ -33,6 +33,7 @@ int getUserData(FILE* file)
 
     printf("Please, enter a password: ");
     scanf("%s", password);
+    getchar();
     // Вызываем функцию аутентификации с PAM
     int pamRet = authenticate(username, password, file);
     return pamRet;
