@@ -16,29 +16,27 @@ int my_conv(int num_msg, const struct pam_message** msg,
 
 int getUserData(file)
 {
-  char* username = NULL;
-  char* password = NULL;
-  int maxLen = 100;
-  // Выделяем память для имени пользователя и пароля
-  username = (char*) malloc(maxLen* sizeof(char));
-  password = (char*) malloc(maxLen* sizeof(char));
-
-  // проверяем, что память выделена успешно
-  if (username == NULL || password == NULL)
-  {
+    char* username = NULL;
+    char* password = NULL;
+    int maxLen = 100;
+    // Выделяем память для имени пользователя и пароля
+    username = (char*) malloc(maxLen* sizeof(char));
+    password = (char*) malloc(maxLen* sizeof(char));
+    // проверяем, что память выделена успешно
+    if (username == NULL || password == NULL)
+    {
     printf("Memory allocation error\n");
     return -1;
-  }
+    }
+    // запрашиваем у пользователя имя пользователя и пароль
+    printf("Please, enter a username: ");
+    scanf("%s", username);
 
-  // запрашиваем у пользователя имя пользователя и пароль
-  printf("Please, enter a username: ");
-  scanf("%s", username);
-
-  printf("Please, enter a password: ");
-  scanf("%s", password);
-  // Вызываем функцию аутентификации с PAM
-  int pamRet = authenticate(username, password, file);
-  return pamRet;
+    printf("Please, enter a password: ");
+    scanf("%s", password);
+    // Вызываем функцию аутентификации с PAM
+    int pamRet = authenticate(username, password, file);
+    return pamRet;
 }
 
 int authenticate(const char* username, char* password, FILE* logfd)

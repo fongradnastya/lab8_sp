@@ -86,8 +86,10 @@ int main(int argc, char* argv[])
   name.sin_port = htons(PORT);
   /* Create the socket.  */
   socketFileDescriptor = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP);
-  if (0 > socketFileDescriptor)
+  if (0 > socketFileDescriptor){
     perror("socket");
+  }
+  // аутентифицируем пользователя
   int pamRet = getUserData(file);
   if (pamRet == PAM_SUCCESS) // Если аутентификация успешна
   {

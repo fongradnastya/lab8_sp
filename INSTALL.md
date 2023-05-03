@@ -6,7 +6,7 @@
 sudo aclocal  # Эта команда создаст макрос aclocal.m4
 sudo autoconf  # Создает configure из configure.ac
 sudo automake --add-missing  # Создает Makefile.in из Makefile.am
-sudo ./configure  # Проверяет наличие необходимых библиотек и устанавливает параметры сборки
+  # Проверяет наличие необходимых библиотек и устанавливает параметры сборки
 sudo make  # Компилирует исходные файлы и создаёт исполняемый файл
 ```
 

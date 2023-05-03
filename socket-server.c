@@ -77,8 +77,11 @@ int main(int argc, char* argv[])
   int timeout = 0;
 
   if (getuid() != 0) {
-    printf("Для запуска сервера требуются права суперпользователя. Выход...\n");
+    printf("Super user rights are required to run the server\n");
     exit(1);
+  }
+  else{
+    printf("User rights are correct\n");
   }
 
   parseArguments(argc, argv, &logFileName, &timeout);
