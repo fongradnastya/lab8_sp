@@ -26,7 +26,7 @@ int my_conv(int num_msg, const struct pam_message** msg,
 * \param[in] file имя лог файла
 * \return получилось ли авторизировать пользователя
 */
-int getUserData(file)
+int getUserData(FILE* file);
 
 /*!
  * \brief Функция аутентификации с PAM. Эта функция используется для проверки имени пользователя и пароля с помощью модуля PAM

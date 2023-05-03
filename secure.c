@@ -7,14 +7,13 @@
 // Структура для хранения ответов PAM
 struct pam_response* reply;
 
-int my_conv(int num_msg, const struct pam_message** msg,
-        struct pam_response** resp, void* appdata_ptr)
+int my_conv(int num_msg, const struct pam_message** msg, struct pam_response** resp, void* appdata_ptr)
 {
     *resp = reply;
     return PAM_SUCCESS;
 }
 
-int getUserData(file)
+int getUserData(FILE* file)
 {
     char* username = NULL;
     char* password = NULL;
