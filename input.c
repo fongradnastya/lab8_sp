@@ -52,7 +52,7 @@ void parseArguments(int argc, char* argv[], char** logFile, int* timeout)
                 break;
             default: // неверный аргумент
                 fprintf(stderr,
-                        "Using: %s [-l logFile] [-t timeout]\n", argv[0]);
+                        "Using: %s [-l logFile] [-t timeout][-d][-h]\n", argv[0]);
                 exit(1);
         }
     }

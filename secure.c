@@ -20,21 +20,21 @@ int getUserData(file)
   char* password = NULL;
   int maxLen = 100;
   // Выделяем память для имени пользователя и пароля
-  username = (char*)malloc(maxLen* sizeof(char));
-  password = (char*)malloc(maxLen* sizeof(char));
+  username = (char*) malloc(maxLen* sizeof(char));
+  password = (char*) malloc(maxLen* sizeof(char));
 
   // проверяем, что память выделена успешно
   if (username == NULL || password == NULL)
   {
-    printf("Ошибка при выделении памяти.\n");
+    printf("Memory allocation error\n");
     return -1;
   }
 
   // запрашиваем у пользователя имя пользователя и пароль
-  printf("Введите имя пользователя: ");
+  printf("Please, enter a username: ");
   scanf("%s", username);
 
-  printf("Введите пароль: ");
+  printf("Please, enter a password: ");
   scanf("%s", password);
   // Вызываем функцию аутентификации с PAM
   int pamRet = authenticate(username, password, file);
@@ -55,8 +55,8 @@ int authenticate(const char* username, char* password, FILE* logfd)
 
     if (pamRet != PAM_SUCCESS)
     {
-        fprintf(stderr, "Ошибка при запуске PAM.\n");
-        writeLog(logfd, "%s\n", "Ошибка при запуске PAM.");
+        fprintf(stderr, "Error starting PAM\n");
+        writeLog(logfd, "%s\n", "Error starting PAM");
         return -1;
     }
 
@@ -74,14 +74,14 @@ int authenticate(const char* username, char* password, FILE* logfd)
 
     if (pamRet == PAM_SUCCESS) // Если аутентификация успешна
     {
-        printf("Аутентификация прошла успешно.\n");
-        writeLog(logfd, "%s\n", "Аутентификация прошла успешно.");
+        printf("Authentication was successful\n");
+        writeLog(logfd, "%s\n", "Authentication was successful");
     }
     else
     {
         // Если аутентификация не успешна
-        printf("Аутентификация не прошла.\n");
-        writeLog(logfd, "%s\n", "Аутентификация не прошла.");
+        printf("Authentication wasn't successful\n");
+        writeLog(logfd, "%s\n", "Authentication wasn't successful");
     }
 
     // Заканчиваем работу с PAM
